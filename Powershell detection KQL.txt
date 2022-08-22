@@ -5,4 +5,4 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any  ("Set-ExecutionPolicy", " Bypass","EncodedCommand","-NoProfile","Invoke","Downloadfile" )
 | where AccountDomain !contains "nt authority"
 | where InitiatingProcessAccountDomain !contains "nt authority"
-| where AccountDomain !contains "iway" 
+| where AccountName !contains "adminuser"
